@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head></head>
+<body>
+<h1>Υπολογισμός ΔΜΣ</h1>
+<!--Ο χρήστης πρέπει να δώσει το ύψος και όχι την ηλικία.-->
+Δώστε ύψος (εκτοστά):<input type="text" value="10" id="heightbox"> 
+</br>
+Δώστε βάρος (κιλά):<input type="text" value="7" id="weightbox"> </br>
+<!--Ο χρήστης δίνει το ύψος σε εκατοστά, αλλά ο ΔΜΣ δέχεται το ύψος σε μέτρα.-->
+<input type="button" value="Υπολογισμός" onclick="var height=document.getElementById('heightbox').value / 100; 
+var weight=document.getElementById('weightbox').value;
+var dms = weight/(height**2); 
+if(dms < 25) {document.getElementById('result').innerHTML='Ο δείκτης μάζας του σώματός σου είναι ' + dms + '. Κατατάσσεσαι στην κατηγορία των κανονικών ατόμων';}
+else{document.getElementById('result').innerHTML='Ο δείκτης μάζας του σώματός σου είναι ' + dms + '. Κατατάσσεσαι στην κατηγορία των βαρέων ατόμων';}">
+<hr>
+<div id="result">
+</div>
+</body>
+</html>
